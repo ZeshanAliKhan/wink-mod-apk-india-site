@@ -1,0 +1,1 @@
+const lazyObserver=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){const img=entry.target;if(img.dataset.src){img.src=img.dataset.src;};if(img.dataset.srcset){img.srcset=img.dataset.srcset;};observer.unobserve(img);}});},{rootMargin:'200px'});document.querySelectorAll('img[loading="lazy"]').forEach(img=>lazyObserver.observe(img));

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /search
+Disallow: /admin
+Sitemap: https://zeshanalikhan.github.io/wink-mod-apk-india-site/sitemap.xml
