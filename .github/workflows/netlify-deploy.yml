@@ -1,0 +1,26 @@
+name: Netlify Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Deploy to Netlify
+        run: netlify deploy --prod --no-build --dir . --site da666f11-7abd-40e7-81a3-0aa2b89cd162 --auth "${{ secrets.NETLIFY_AUTH_TOKEN }}"

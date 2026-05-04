@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = process.cwd();
-const siteDomain = 'https://zeshanalikhan.github.io/wink-mod-apk-india-site';
+const siteDomain = 'https://zeshan-wink-mod-apk-india.netlify.app';
 const ownedLinks = [
   {
     href: 'https://sites.google.com/view/capcutapklatestversion/home',
